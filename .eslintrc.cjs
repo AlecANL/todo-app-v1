@@ -22,11 +22,18 @@ module.exports = {
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "react"
     ],
     "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
     }
 }
