@@ -6,6 +6,7 @@
   --bg-color: hsla(0, 0%, 98%, 1.00);
   --text-color: hsla(232, 20%, 31%, 1.00);
   --text-completed: hsla(233, 9%, 81%, 1.00);
+  --bg-image: url("assets/images/bg-ligth.webp");
 }
 
 html {
@@ -25,10 +26,23 @@ h1, h2, h3,h4, h5, h6, p, figure {
   margin: 0;
 }
 
+
+
 html[data-theme="dark"] {
   --bg-color: hsla(233, 17%, 10%, 1.00);
   --text-color: hsla(233, 35%, 82%, 1.00);
   --text-completed: hsla(230, 15%, 31%, 1.00);
+  --bg-image: url("assets/images/bg-dark.webp");
+
+  .bg-image {
+    background-position: center;
+  }
 }
 
-
+.bg-image {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
