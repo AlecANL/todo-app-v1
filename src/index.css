@@ -7,6 +7,16 @@
   --text-color: hsla(232, 20%, 31%, 1.00);
   --text-completed: hsla(233, 9%, 81%, 1.00);
   --bg-image: url("assets/images/bg-ligth.webp");
+  --bg-gradient-fallback: rgb(85,150,255);
+  --bg-gradient: linear-gradient(90deg, rgba(172,45,235,0.6) 0%, rgba(85,150,255,0.6) 100%);
+  --max-width: 327px;
+  --m-top: 48px;
+  --item-max-block-size: 48px;
+  --bg-todo-item: #fff;
+  --bg-todo-btn: hsla(236, 31%, 90%, 1.00);
+  --btn-todo-size: 20px;
+  --rounded: 5px;
+  --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);;
 }
 
 html {
@@ -22,10 +32,15 @@ body {
 }
 
 
-h1, h2, h3,h4, h5, h6, p, figure {
+h1, h2, h3,h4, h5, h6, p, figure, input, label {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 
 html[data-theme="dark"] {
@@ -33,6 +48,12 @@ html[data-theme="dark"] {
   --text-color: hsla(233, 35%, 82%, 1.00);
   --text-completed: hsla(230, 15%, 31%, 1.00);
   --bg-image: url("assets/images/bg-dark.webp");
+  --bg-gradient-fallback: rgb(55,16,189);
+  --bg-gradient: linear-gradient(90deg, rgba(55,16,189,0.5) 0%, rgba(164,35,149,0.5) 100%);
+  --item-max-block-size: 64px;
+  --bg-todo-btn: hsla(236, 13%, 23%, 1.00);
+  --bg-todo-item: hsla(234, 22%, 17%, 1.00);
+  --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
 
   .bg-image {
     background-position: center;
@@ -46,3 +67,11 @@ html[data-theme="dark"] {
   background-origin: border-box;
   background-repeat: no-repeat;
 }
+
+@media (min-width: 768px) {
+  :root {
+    --max-width: 540px;
+    --m-top: 70px;
+  }
+}
+/*background: linear-gradient( to bottom right, var(--color-gradient-start), var(--color-gradient-end) );*/
