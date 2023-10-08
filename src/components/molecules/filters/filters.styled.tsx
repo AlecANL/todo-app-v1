@@ -54,6 +54,10 @@ export const FiltersContainerStyled = styled.div`
   bottom: 0;
   box-shadow: var(--box-shadow);
   
+  &.filter-all #all, &.filter-active #active, &.filter-completed #completed {
+    color: red;
+  }
+  
   button {
     padding-block: 1rem;
     padding-inline: 1.2rem;

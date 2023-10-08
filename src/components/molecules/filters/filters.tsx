@@ -5,21 +5,36 @@ import {
   FiltersStyled, FilterStyledContent
 } from '@components/molecules/filters/filters.styled.tsx'
 import { Button } from '@components/atoms/button'
+import { useTodoStore } from '@store/todo.store.ts'
+import { type HTMLAttributes } from 'react'
 
-export function Filters () {
+interface Props extends HTMLAttributes<HTMLDivElement> {
+  handleChangeFilter: (filter: string) => void
+  currentFilter: string
+}
+export function Filters (props: Props) {
+  const { length, clearCompletedTodos } = useTodoStore()
+  const { handleChangeFilter, currentFilter } = props
+
   return (
     <>
-      <FiltersStyled>
-        <FilterStyledContent>
-          <FilterItemsStyled>5 items left</FilterItemsStyled>
-          <FiltersContainerStyled>
-            <Button>All</Button>
-            <Button>Active</Button>
-            <Button>Completed</Button>
-          </FiltersContainerStyled>
-          <FilterClearStyled>Clear Completed</FilterClearStyled>
-        </FilterStyledContent>
-      </FiltersStyled>
+      {
+        length > 0
+          ? (
+            <FiltersStyled>
+              <FilterStyledContent>
+                <FilterItemsStyled>{length} items left</FilterItemsStyled>
+                <FiltersContainerStyled className={currentFilter ? `filter-${currentFilter}` : ''}>
+                  <Button id='all' onClick={() => { handleChangeFilter('all') }}>All</Button>
+                  <Button id='active' onClick={() => { handleChangeFilter('active') }}>Active</Button>
+                  <Button id='completed' onClick={() => { handleChangeFilter('completed') }}>Completed</Button>
+                </FiltersContainerStyled>
+                <FilterClearStyled onClick={clearCompletedTodos}>Clear Completed</FilterClearStyled>
+              </FilterStyledContent>
+            </FiltersStyled>
+            )
+          : null
+      }
     </>
   )
 }
