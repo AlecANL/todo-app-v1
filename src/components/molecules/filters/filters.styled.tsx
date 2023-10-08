@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const FiltersStyled = styled.footer`
   position: relative;
   min-height: 114px;
+  color: var(--gray);
   
   button {
     color: inherit;
@@ -38,6 +39,10 @@ export const FilterClearStyled = styled.button`
   padding-inline: 1.2rem;
   background-color: transparent;
   border-color: transparent;
+
+  &:hover {
+    color: var(--text-color);
+  }
   
   @media (min-width: 768px) {
     flex-shrink: 0;
@@ -55,7 +60,11 @@ export const FiltersContainerStyled = styled.div`
   box-shadow: var(--box-shadow);
   
   &.filter-all #all, &.filter-active #active, &.filter-completed #completed {
-    color: red;
+    color: var(--active-color);
+  }
+  
+  button:hover {
+    color: var(--text-color);
   }
   
   button {

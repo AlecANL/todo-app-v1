@@ -16,7 +16,11 @@
   --bg-todo-btn: hsla(236, 31%, 90%, 1.00);
   --btn-todo-size: 20px;
   --rounded: 5px;
-  --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);;
+  --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+  --active-color: #3a7cfd;
+  --gray: hsla(236, 8%, 57%, 1.00);
+  --font-size: 12px;
+  --txt-font-size: 14px;
 }
 
 html {
@@ -36,6 +40,10 @@ h1, h2, h3,h4, h5, h6, p, figure, input, label {
   margin: 0;
 }
 
+svg {
+  fill: var(--text-color);
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -50,10 +58,10 @@ html[data-theme="dark"] {
   --bg-image: url("assets/images/bg-dark.webp");
   --bg-gradient-fallback: rgb(55,16,189);
   --bg-gradient: linear-gradient(90deg, rgba(55,16,189,0.5) 0%, rgba(164,35,149,0.5) 100%);
-  --item-max-block-size: 64px;
   --bg-todo-btn: hsla(236, 13%, 23%, 1.00);
   --bg-todo-item: hsla(234, 22%, 17%, 1.00);
   --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+  --gray: hsla(233, 17%, 38%, 1.00);
 
   .bg-image {
     background-position: center;
@@ -72,5 +80,7 @@ html[data-theme="dark"] {
   :root {
     --max-width: 540px;
     --m-top: 70px;
+    --font-size: 18px;
+    --item-max-block-size: 64px;
   }
 }

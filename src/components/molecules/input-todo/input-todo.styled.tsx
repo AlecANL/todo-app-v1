@@ -15,6 +15,19 @@ export const InputTodoStyled = styled.input`
   border-color: transparent;
   background-color: var(--bg-todo-item);
   width: 100%;
+  border-radius: var(--rounded);
+  padding-inline: 1rem;
+  font-size: var(--font-size);
+  color: inherit;
+  
+  &::placeholder {
+    color: var(--gray);
+  }
+  
+  &:focus {
+    outline: none;
+    border: 1px solid var(--active-color);
+  }
 `
 
 export const InputTodoLabelStyled = styled.label`

@@ -17,7 +17,7 @@ export const MoonIcon = () => {
 export const DeleteIcon = () => {
   return (
     <svg aria-hidden={true} width="18" height="18" fill="none">
-      <path fill="currentColor" fillRule="evenodd" d="M17.678.707 16.97 0 8.839 8.132.707 0 0 .707 8.132 8.84 0 16.97l.707.707L8.84 9.546l8.132 8.132.707-.707-8.132-8.132L17.678.707Z" clipRule="evenodd"/>
+      <path fillRule="evenodd" d="M17.678.707 16.97 0 8.839 8.132.707 0 0 .707 8.132 8.84 0 16.97l.707.707L8.84 9.546l8.132 8.132.707-.707-8.132-8.132L17.678.707Z" clipRule="evenodd"/>
     </svg>
   )
 }

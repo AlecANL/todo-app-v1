@@ -8,6 +8,13 @@ export const TodoItemStyled = styled.li`
   gap: 1rem;
   align-items: center;
   background-color: var(--bg-todo-item);
+  color: inherit;
+  font-size: var(--font-size);
+  
+  &.complete {
+    text-decoration: line-through;
+    color: var(--text-completed);
+  }
   
   @media (min-width: 768px) {
     button {

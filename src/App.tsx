@@ -4,7 +4,7 @@ import { InputTodo } from '@components/molecules/input-todo'
 import { Filters } from '@components/molecules/filters'
 import { TodoList } from '@components/organism/todo-list'
 import { useFilter } from '@hooks/useFilter.ts'
-import { BgImageContainer, HeaderStyled, MainStyled, TodoSectionStyled } from './app.styled.tsx'
+import { BgImageContainer, HeaderStyled, MainStyled, ParagraphStyled, TodoSectionStyled } from './app.styled.tsx'
 
 function App () {
   const { handleToggleTheme } = useToggleTheme()
@@ -12,9 +12,9 @@ function App () {
 
   /*
   * [✅] -> Refactor code
-  * [] -> refactor styles
+  * [✅] -> refactor styles
   * [] -> add framer motion
-  * [] -> refactor drag and drop
+  * [✅] -> refactor drag and drop
   * [] -> add fonts
   * [] -> add images if not have todos
   * [] -> add tests
@@ -23,7 +23,7 @@ function App () {
   return (
     <>
       <BgImageContainer className='bg-image'></BgImageContainer>
-      <MainStyled>/
+      <MainStyled>
         <HeaderStyled>
           <h1>todo</h1>
           <SwitchTheme handleToggleTheme={handleToggleTheme} />
@@ -41,7 +41,7 @@ function App () {
         {
           length > 0
             ? (
-              <p>Drag and drop to reorder list</p>
+              <ParagraphStyled>Drag and drop to reorder list</ParagraphStyled>
               )
             : null
         }

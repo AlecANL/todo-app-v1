@@ -41,3 +41,9 @@ export const TodoSectionStyled = styled.section`
     margin-top: 48px;
   }
 `
+
+export const ParagraphStyled = styled.p`
+  padding: 2rem;
+  text-align: center;
+  margin-top: calc(50px - 2rem);
+`

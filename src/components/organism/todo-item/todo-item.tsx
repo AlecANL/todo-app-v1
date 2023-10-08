@@ -44,7 +44,9 @@ export function TodoItem (props: Props) {
         onDragEnd={drop}
         onDragOver={dragOver}
         onDragLeave={dragLeave}
-        draggable>
+        className={todo.completed ? 'complete' : ''}
+        draggable
+      >
         <TodoListCheckInputStyled
           aria-hidden={true}
           id={listId}
