@@ -31,6 +31,7 @@ export const HeaderStyled = styled.header`
   
   h1 {
     text-transform: uppercase;
+    color: #fff;
   }
 `
 

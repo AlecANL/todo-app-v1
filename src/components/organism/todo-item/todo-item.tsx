@@ -9,6 +9,7 @@ import { type DragAndDropEvent, type Todo } from '@models/todo.interface.ts'
 import { useTodoStore } from '@store/todo.store.ts'
 import { Button } from '@components/atoms/button'
 import { CheckIcon, DeleteIcon } from '@components/atoms/icons/icons.tsx'
+import { AnimatePresence } from 'framer-motion'
 
 interface Props extends React.HTMLAttributes<HTMLLIElement> {
   dragStart: () => void
@@ -38,29 +39,31 @@ export function TodoItem (props: Props) {
 
   return (
     <>
-      <TodoItemStyled
-        onDragStart={dragStart}
-        onDragEnter={dragEnter}
-        onDragEnd={drop}
-        onDragOver={dragOver}
-        onDragLeave={dragLeave}
-        className={todo.completed ? 'complete' : ''}
-        draggable
-      >
-        <TodoListCheckInputStyled
-          aria-hidden={true}
-          id={listId}
-          onChange={handleInputChange}
-          type='checkbox'
-          checked={todo.completed} />
-        <TodoListCheckBoxLabelStyled htmlFor={listId}>
-          <CheckIcon/>
-        </TodoListCheckBoxLabelStyled>
-        <TodoListLabelStyled htmlFor={listId}>{children}</TodoListLabelStyled>
-        <Button onClick={handleDeleteTodo}>
-          <DeleteIcon/>
-        </Button>
-      </TodoItemStyled>
+      <AnimatePresence>
+          <TodoItemStyled
+            onDragStart={dragStart}
+            onDragEnter={dragEnter}
+            onDragEnd={drop}
+            onDragOver={dragOver}
+            onDragLeave={dragLeave}
+            className={todo.completed ? 'complete' : ''}
+            draggable
+          >
+            <TodoListCheckInputStyled
+              aria-hidden={true}
+              id={listId}
+              onChange={handleInputChange}
+              type='checkbox'
+              checked={todo.completed} />
+            <TodoListCheckBoxLabelStyled htmlFor={listId}>
+              <CheckIcon/>
+            </TodoListCheckBoxLabelStyled>
+            <TodoListLabelStyled htmlFor={listId}>{children}</TodoListLabelStyled>
+            <Button onClick={handleDeleteTodo}>
+              <DeleteIcon/>
+            </Button>
+          </TodoItemStyled>
+      </AnimatePresence>
     </>
   )
 }

@@ -23,6 +23,14 @@
   --txt-font-size: 14px;
 }
 
+@font-face {
+  font-family: 'josefinaSans';
+  src: url("./assets/fonts/JosefinSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   height: 100%;
   background-color: var(--bg-color);
@@ -32,12 +40,16 @@ html {
 body {
   margin: 0;
   height: 100%;
-
+  font-family: josefinaSans, sans-serif;
 }
 
 
 h1, h2, h3,h4, h5, h6, p, figure, input, label {
   margin: 0;
+}
+
+button {
+  font-family: inherit;
 }
 
 svg {
@@ -78,7 +90,7 @@ html[data-theme="dark"] {
 
 @media (min-width: 768px) {
   :root {
-    --max-width: 540px;
+    --max-width: 580px;
     --m-top: 70px;
     --font-size: 18px;
     --item-max-block-size: 64px;

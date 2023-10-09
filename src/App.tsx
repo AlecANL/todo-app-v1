@@ -8,17 +8,7 @@ import { BgImageContainer, HeaderStyled, MainStyled, ParagraphStyled, TodoSectio
 
 function App () {
   const { handleToggleTheme } = useToggleTheme()
-  const { todosFiltered, length, handleChangeFilter, filter } = useFilter()
-
-  /*
-  * [✅] -> Refactor code
-  * [✅] -> refactor styles
-  * [] -> add framer motion
-  * [✅] -> refactor drag and drop
-  * [] -> add fonts
-  * [] -> add images if not have todos
-  * [] -> add tests
-  * */
+  const { todosFiltered, handleChangeFilter, filter } = useFilter()
 
   return (
     <>
@@ -39,7 +29,7 @@ function App () {
           handleChangeFilter={handleChangeFilter}
         />
         {
-          length > 0
+          todosFiltered.length > 0
             ? (
               <ParagraphStyled>Drag and drop to reorder list</ParagraphStyled>
               )

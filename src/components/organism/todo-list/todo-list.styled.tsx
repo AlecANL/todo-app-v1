@@ -10,6 +10,19 @@ export const TodoListStyled = styled.ul`
     border-bottom: 1px solid var(--bg-todo-btn);
   }
   
+  .empty {
+    background-color: var(--bg-todo-item);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+
+  
   
   @media (min-width: 768px) {
     margin-top: 1.5rem;
