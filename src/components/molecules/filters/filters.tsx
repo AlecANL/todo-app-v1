@@ -21,13 +21,13 @@ export function Filters (props: Props) {
       {
         length > 0
           ? (
-            <FiltersStyled>
+            <FiltersStyled aria-label='filters-section'>
               <FilterStyledContent>
                 <FilterItemsStyled>{length} items left</FilterItemsStyled>
-                <FiltersContainerStyled className={currentFilter ? `filter-${currentFilter}` : ''}>
+                <FiltersContainerStyled aria-label='filter-button-section' className={currentFilter ? `filter-${currentFilter}` : ''}>
                   <Button id='all' onClick={() => { handleChangeFilter('all') }}>All</Button>
                   <Button id='active' onClick={() => { handleChangeFilter('active') }}>Active</Button>
-                  <Button id='completed' onClick={() => { handleChangeFilter('completed') }}>Completed</Button>
+                  <Button aria-label='completed-filter' id='completed' onClick={() => { handleChangeFilter('completed') }}>Completed</Button>
                 </FiltersContainerStyled>
                 <FilterClearStyled onClick={clearCompletedTodos}>Clear Completed</FilterClearStyled>
               </FilterStyledContent>

@@ -50,6 +50,7 @@ export function TodoItem (props: Props) {
             draggable
           >
             <TodoListCheckInputStyled
+              aria-label='checkbox'
               aria-hidden={true}
               id={listId}
               onChange={handleInputChange}

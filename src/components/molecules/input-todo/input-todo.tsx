@@ -24,9 +24,9 @@ export function InputTodo () {
 
   return (
     <>
-      <InputTodoFormStyled onSubmit={onSubmit}>
+      <InputTodoFormStyled aria-label='form' onSubmit={onSubmit}>
         <InputTodoLabelStyled id='text'></InputTodoLabelStyled>
-        <InputTodoStyled ref={inputRef} type='text' placeholder='Create a new todo...' />
+        <InputTodoStyled aria-label='input-todo' ref={inputRef} type='text' placeholder='Create a new todo...' />
       </InputTodoFormStyled>
     </>
   )
