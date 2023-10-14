@@ -60,7 +60,7 @@ export function TodoItem (props: Props) {
               <CheckIcon/>
             </TodoListCheckBoxLabelStyled>
             <TodoListLabelStyled htmlFor={listId}>{children}</TodoListLabelStyled>
-            <Button onClick={handleDeleteTodo}>
+            <Button aria-label='remove-todo' onClick={handleDeleteTodo}>
               <DeleteIcon/>
             </Button>
           </TodoItemStyled>

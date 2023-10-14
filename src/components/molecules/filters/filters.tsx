@@ -29,7 +29,7 @@ export function Filters (props: Props) {
                   <Button id='active' onClick={() => { handleChangeFilter('active') }}>Active</Button>
                   <Button aria-label='completed-filter' id='completed' onClick={() => { handleChangeFilter('completed') }}>Completed</Button>
                 </FiltersContainerStyled>
-                <FilterClearStyled onClick={clearCompletedTodos}>Clear Completed</FilterClearStyled>
+                <FilterClearStyled aria-label='clear' onClick={clearCompletedTodos}>Clear Completed</FilterClearStyled>
               </FilterStyledContent>
             </FiltersStyled>
             )
