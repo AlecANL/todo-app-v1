@@ -46,7 +46,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [repo](https://github.com/AlecANL/todo-app-v1)
-- Live Site URL: [demo](https://your-live-site-url.com)
+- Live Site URL: [demo](https://todo-app-v1-nu.vercel.app/)
 
 ## Author
 
